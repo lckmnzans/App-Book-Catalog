@@ -44,7 +44,9 @@ class Perpustakaan extends CI_Controller {
             $this->load->view('insert');
         } else {
             $buku->insertBook();
-            $this->session->set_flashdata('success', 'Berhasil ditambahkan');
+            if ($status) {
+                $this->session->set_flashdata('success', 'Berhasil ditambahkan');
+            }
             redirect('perpustakaan/list');
         }
     }

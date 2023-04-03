@@ -58,6 +58,7 @@ class Perpustakaan_model extends CI_Model {
     public function insertBook()
     {
         $query = $this->getBook($this->input->post('kodebuku'));
+        $status = true;
         if ($query->kodebuku != $this->input->post('kodebuku')){
             $post = $this->input->post();
             $data = array(
@@ -68,7 +69,8 @@ class Perpustakaan_model extends CI_Model {
             );
             return $this->db->insert($this->_table, $data);
         } else {
-            return false;
+            $status = false;
+            return $status;
         }
         
     }
