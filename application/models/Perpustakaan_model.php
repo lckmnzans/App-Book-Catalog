@@ -57,14 +57,20 @@ class Perpustakaan_model extends CI_Model {
 
     public function insertBook()
     {
-        $post = $this->input->post();
-        $data = array(
-            'kodebuku' => $post['kodebuku'],
-            'judulbuku' => $post['judulbuku'],
-            'pengarang' => $post['pengarang'],
-            'penerbit' => $post['penerbit']
-        );
-        return $this->db->insert($this->_table, $data);
+        $query = $this->getBook($this->input->post('kodebuku'));
+        if ($query->kodebuku != $this->input->post('kodebuku')){
+            $post = $this->input->post();
+            $data = array(
+                'kodebuku' => $post['kodebuku'],
+                'judulbuku' => $post['judulbuku'],
+                'pengarang' => $post['pengarang'],
+                'penerbit' => $post['penerbit']
+            );
+            return $this->db->insert($this->_table, $data);
+        } else {
+            return false;
+        }
+        
     }
 
     public function deleteBook($kodebuku)
