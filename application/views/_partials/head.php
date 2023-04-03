@@ -46,9 +46,25 @@
 		margin: 5px;
 	}
 
+	.status {
+		margin-left: 5vh;
+	}
+
 	.content {
 		padding-left: 5vh;
 		padding-right: 5vh;
+	}
+
+	.form-control {
+		margin-top: 1vh;
+		margin-bottom: 3vh;
+	}
+
+	.formfill {
+		display:inline-block;
+		border: 2px solid #2B65EC;
+		height: 40px;
+  		border-radius: 4px;
 	}
 
 	#act {

@@ -1,7 +1,7 @@
 <div class="status">
     <?php
-    if ($this->session->flashdata('success')):
-        echo $this->session->flashdata('success');
+    if ($this->session->flashdata('status')):
+        echo $this->session->flashdata('status');
     endif;
     ?>
 </div>

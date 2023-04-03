@@ -7,7 +7,7 @@
         <?php $this->load->view('_partials/navbar.php'); ?>
         <h2>Hasil pencarian</h1>
         <?php if ($buku): ?>
-		<table border=1>
+		<table class="table table-bordered border-primary" border=1>
 			<thead>
 				<tr>
 					<th>Kode Buku</th>

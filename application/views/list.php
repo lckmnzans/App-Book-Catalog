@@ -33,9 +33,9 @@
             <td>
             	<?php echo $buku->penerbit ?>
             </td>
-            <td>
-				<a id="act" href=edit/<?php echo $buku->kodebuku?> style="text-align:left;">Edit</a>
-				<a id="act" href=delete/<?php echo $buku->kodebuku?> style="text-align:right;">Hapus</a>
+            <td style="text-align:center;">
+				<a id="act" href=edit/<?php echo $buku->kodebuku?>>Edit</a>
+				<a id="act" href=delete/<?php echo $buku->kodebuku?>>Hapus</a>
 			</tr>
 			<?php endforeach; ?>
 		</table>

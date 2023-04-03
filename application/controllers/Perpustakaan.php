@@ -29,8 +29,12 @@ class Perpustakaan extends CI_Controller {
     public function search()
     {//DONE
         $kodebuku = $this->input->get("kodebuku");
-        $data["buku"] = $this->perpustakaan_model->getBook($kodebuku);
-        $this->load->view("_result", $data);
+        if (!isset($kodebuku)) {
+            $data["buku"] = $this->perpustakaan_model->getBook($kodebuku);
+            $this->load->view("_result", $data);
+        } else {
+            $this->list();
+        }
     }
 
     public function add()
@@ -45,7 +49,9 @@ class Perpustakaan extends CI_Controller {
         } else {
             $buku->insertBook();
             if ($status) {
-                $this->session->set_flashdata('success', 'Berhasil ditambahkan');
+                $this->session->set_flashdata('status', 'Berhasil ditambahkan');
+            } else {
+                $this->session->set_flashdata('status', 'Tidak berhasil ditambahkan');
             }
             redirect('perpustakaan/list');
         }
@@ -74,7 +80,7 @@ class Perpustakaan extends CI_Controller {
     {//DONE
 		$buku = $this->perpustakaan_model;
 		$buku->deleteBook($kodebuku);
-        $this->session->set_flashdata('success', 'Berhasil dihapus');
+        $this->session->set_flashdata('status', 'Berhasil dihapus');
         redirect('perpustakaan/list');
     }
 }

@@ -6,6 +6,7 @@
 <body>
     <?php $this->load->view('_partials/navbar.php'); ?>
 	<?php $this->load->view('_partials/status.php'); ?>
+    <div class="content">
     <form action="<?php base_url("perpustakaan/edit") ?>" method="post">
         <div class="form-group">
             <label for="kodebuku">Kode Buku</label>
@@ -36,8 +37,9 @@
             </div>
         </div>
         <input type="hidden" name="kodebuku" value="<?php echo $buku->kodebuku; ?>">
-        <input type="submit" value="Save" />
+        <input class="btn btn-primary" type="submit" value="Save" />
     </form>
+    </div>
     <?php $this->load->view('_partials/footer.php');?>
 </body>
 </html>

@@ -6,6 +6,7 @@
 <body>
 	<?php $this->load->view('_partials/navbar.php'); ?>
 	<?php $this->load->view('_partials/status.php'); ?>
+	<div class="content">
 	<form method="post" action="<?php echo base_url('perpustakaan/add'); ?>">
 		<label for="kodebuku">Kode Buku</label>
 		<input class="form-control <?php echo form_error('kodebuku') ? 'is-invalid':'' ?>" type="text" name="kodebuku" placeholder="Kode buku" />
@@ -27,8 +28,9 @@
 		<div class="invalid-feedback">
 			<?php echo form_error('penerbit'); ?>
 		</div>
-        <input type="submit" value="Tambah" />
+        <input class="btn btn-primary" type="submit" value="Tambahkan" />
 	</form>
+	</div>
     <?php $this->load->view('_partials/footer.php'); ?>
 </body>
 
