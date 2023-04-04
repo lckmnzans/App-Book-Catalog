@@ -29,7 +29,7 @@ class Perpustakaan extends CI_Controller {
     public function search()
     {//DONE
         $kodebuku = $this->input->get("kodebuku");
-        if (!isset($kodebuku)) {
+        if (!empty($kodebuku)) {
             $data["buku"] = $this->perpustakaan_model->getBook($kodebuku);
             $this->load->view("_result", $data);
         } else {
@@ -48,11 +48,6 @@ class Perpustakaan extends CI_Controller {
             $this->load->view('insert');
         } else {
             $buku->insertBook();
-            if ($status) {
-                $this->session->set_flashdata('status', 'Berhasil ditambahkan');
-            } else {
-                $this->session->set_flashdata('status', 'Tidak berhasil ditambahkan');
-            }
             redirect('perpustakaan/list');
         }
     }

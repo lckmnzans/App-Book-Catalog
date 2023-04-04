@@ -5,7 +5,8 @@
     </head>
     <body>
         <?php $this->load->view('_partials/navbar.php'); ?>
-        <h2>Hasil pencarian</h1>
+		<div class="content">
+        <h2>Hasil Pencarian</h2>
         <?php if ($buku): ?>
 		<table class="table table-bordered border-primary" border=1>
 			<thead>
@@ -28,6 +29,7 @@
 		<?php else: ?>
             <p>Tidak ditemukan</p>
         <?php endif; ?>
+		</div>
         <?php $this->load->view('_partials/footer.php'); ?>
     </body>
 </html>

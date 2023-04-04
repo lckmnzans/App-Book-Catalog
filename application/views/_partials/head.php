@@ -9,9 +9,9 @@
  		box-sizing: content-box;
 	}
 
-	h1 {
+	h2 {
 		font-family: Arial, Helvetica, sans-serif;
-		text-align:center;
+		text-align:left;
 	}
 
 	.navbar {

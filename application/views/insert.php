@@ -7,6 +7,7 @@
 	<?php $this->load->view('_partials/navbar.php'); ?>
 	<?php $this->load->view('_partials/status.php'); ?>
 	<div class="content">
+	<h2>Tambahkan Buku</h2>
 	<form method="post" action="<?php echo base_url('perpustakaan/add'); ?>">
 		<label for="kodebuku">Kode Buku</label>
 		<input class="form-control <?php echo form_error('kodebuku') ? 'is-invalid':'' ?>" type="text" name="kodebuku" placeholder="Kode buku" />

@@ -9,7 +9,7 @@
 	<?php $this->load->view('_partials/navbar.php'); ?>
 	<?php $this->load->view('_partials/status.php'); ?>
 	<div class="content">
-	<h2 style="font-family:Arial,Helvetica,sans-serif;margin-top:0;">Daftar Buku</h2>
+	<h2 style="margin-top:0;">Daftar Buku</h2>
 		<table class="table table-bordered border-primary" border=1>
 			<tr>
 				<th>Kode Buku</th>
