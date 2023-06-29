@@ -7,6 +7,7 @@
     <?php $this->load->view('_partials/navbar.php'); ?>
 	<?php $this->load->view('_partials/status.php'); ?>
     <div class="content">
+    <h2>Edit Buku</h2>
     <form action="<?php base_url("perpustakaan/edit") ?>" method="post">
         <div class="form-group">
             <label for="kodebuku">Kode Buku</label>
